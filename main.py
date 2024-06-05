@@ -1,4 +1,6 @@
 import streamlit as sl
+import pandas as pd
+table=pd.DataFrame({"Column 1": [1,2,3,4,5,6,7], "Column 2": [11,12,13,14,15,16,17]})
 
 sl.title('Hi! am I streamlit')
 sl.subheader('Hi I am a subheader')
@@ -24,4 +26,7 @@ print("Hello World!!")
 """
 
 sl.code(code, language="python")
-
+sl.write("## H2")
+sl.metric(label="Wind Speed", value="120ms⁻¹", delta="-1.4⁻¹")
+sl.table(table)
+sl.dataframe(table)
